@@ -1,0 +1,24 @@
+Côté serveur :
+	-NPM : node package manager
+	dans /client : npm run serve
+	- browserify permet la gestion des js personalisés + css 
+	(modifier entry.js puis "browserify entry.js --debug > bundle.js")
+
+gestion des comptes adminbroexpressjs
+calendrier (https://www.cssscript.com/filterable-calendar-vanilla/) + refresh calendrier à l'interaction ?
+nodemailder + serveur smtp gratuit : mailjet.com
+
+
+TO DO :
+- import bundlejs au lieu de script bundlejs
+
+
+
+ASTUCES :
+	HTML
+	- appliquer "100vh" pour height et weight pour ne plus s'inquiéter de l'héritage depuis <html> ou <body>
+
+	GIT :
+	git add .
+	git reset . (si fichier ajouté par erreur)
+	git config --global core.safecrlf false (pour désactiver warning crlf)
