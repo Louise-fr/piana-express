@@ -5,7 +5,7 @@ Côté serveur :
 	(modifier entry.js puis "browserify entry.js --debug > bundle.js")
 
 gestion des comptes adminbroexpressjs
-calendrier (https://www.cssscript.com/filterable-calendar-vanilla/) + refresh calendrier à l'interaction ?
+calendrier (https://www.cssscript.com/filterable-calendar-vanilla/) + refresh calendrier à l'interaction -- OK
 nodemailder + serveur smtp gratuit : mailjet.com
 
 
@@ -19,6 +19,15 @@ ASTUCES :
 	- appliquer "100vh" pour height et weight pour ne plus s'inquiéter de l'héritage depuis <html> ou <body>
 
 	GIT :
+	git remote add origin git@github.com:Louise-fr/piana-express.git pour lier au repo en ligne
 	git add .
 	git reset . (si fichier ajouté par erreur)
 	git config --global core.safecrlf false (pour désactiver warning crlf)
+	git commit -m "initial commit"
+	git push -u origin master
+
+	Run
+  	-git config --global user.email "you@example.com"
+  	-git config --global user.name "Your Name"
+	to set your account's default identity.
+	Omit --global to set the identity only in this repository.
