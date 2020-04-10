@@ -258,7 +258,7 @@
                                 <div class="form-group">
                                     <!-- form choice -->
                                     <FormChoice
-                                        @visitor-choice="form.subject = $event"
+                                        @visitor-choice="updateSubject"
                                     ></FormChoice>
                                 </div>
                             </div>
@@ -339,11 +339,13 @@ export default {
       }
 
       e.preventDefault();
-    }
-  }
+    },
 
-  ,
-};
+    updateSubject($event){
+        this.form.subject = $event
+    },
+
+}};
 </script>
 
 <style>
