@@ -2,19 +2,19 @@
     <div>
       <div class="col-md-4">
           <div class="form-group">
-              <label for="name">
+              <label for="message">
                   Message</label>
               <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                  placeholder="Message" :disabled="isDisabledMessage"></textarea>
+                  placeholder="Votre message (vous pouvez également y indiquer un numéro de téléphone si vous le souhaitez)" :disabled="isDisabledMessage" v-model="message" @input="$emit('visitor-message', message)"></textarea>
           </div>
       </div>
       <div class="col-md-4">
           <div class="form-group">
               <label for="subject">Dates de réservation</label>	 	
-              <div class="input-group input-daterange" data-provide="datepicker">
-                  <input type="text" class="form-control" id="datepicker" :disabled="isDisabledDate">
+              <div class="input-group input-daterange" data-provide="datepicker"  >
+                  <input type="text" class="form-control" id="datepicker1" :disabled="isDisabledDate" :required="isRequired">
                   <div class="input-group-addon">au</div>
-                  <input type="text" class="form-control" id="datepicker2" :disabled="isDisabledDate">
+                  <input type="text" class="form-control" id="datepicker2" :disabled="isDisabledDate" :required="isRequired">
               </div>
           </div>
       </div>
@@ -23,27 +23,41 @@
 
 
 <script>
+
 export default {
-  name: 'FormChoiceFields',
-  props: ['choice'],
+    name: 'FormChoiceFields',
+    props: ['choice', 'end_date'],
+    data: function () {
+    return {
+        message: '',
+    }
+  },
   computed: {
     isDisabledMessage: function(){
         if ((this.choice == 'dates') || (this.choice == 'infos')){
             return false
         }
-        else return true
+        return true
     },
     isDisabledDate: function(){
         if (this.choice == 'dates'){
             return false
         }
-        else return true
+        return true
     },
+    isRequired: function(){
+        if (this.choice == 'dates'){
+            return true
+        }
+        return false
+    },
+  },
+  methods: {
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style >
 
 </style>

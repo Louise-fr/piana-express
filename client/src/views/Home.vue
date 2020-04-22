@@ -12,7 +12,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="#intro">
-                        <h1>Maison pianaise</h1>
+                        <h1>Coin pianais</h1>
                     </a>
                 </div>
     
@@ -23,12 +23,12 @@
             <li><a href="#about">A propos</a></li>
             <li><a href="#service">Les +</a></li>
             <li><a href="#contact">Réserver</a></li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                 <li><a href="/admin">Se connecter</a></li>
                 </ul>
-            </li>
+            </li> -->
             </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -59,7 +59,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                         <div class="section-heading">
-                        <h2>La maison</h2>
+                        <h2>Le lieu</h2>
                         <i class="fa fa-2x fa-angle-down"></i>
                         </div>
                         </div>
@@ -83,6 +83,7 @@
                         <li data-target="#my_carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#my_carousel" data-slide-to="1"></li>
                         <li data-target="#my_carousel" data-slide-to="2"></li>
+                        <li data-target="#my_carousel" data-slide-to="3"></li>
                     </ol>
                     <!-- Slides -->
                     <div class="carousel-inner">
@@ -111,6 +112,16 @@
                             </div>
                             <div class="carousel-caption">
                                 <h5> La belle plante ! </h5>
+                                </div>
+                        </div>
+                        <!-- Page 4 -->
+                        <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/vue-piana.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Vue du village </h5>
                                 </div>
                         </div>
                     </div>
@@ -211,8 +222,6 @@
         <!-- /Section: services -->
         
     
-        
-    
         <!-- Section: contact -->
         <section id="contact" class="home-section text-center bg-white">
             <div class="heading-contact">
@@ -221,7 +230,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                         <div class="section-heading">
-                        <h2>Nous contacter</h2>
+                        <h2>Nous contacter </h2>
                         <i class="fa fa-2x fa-angle-down"></i>
                         </div>
                         </div>
@@ -263,7 +272,10 @@
                                 </div>
                             </div>
 
-                            <FormChoiceFields :choice='form.subject'></FormChoiceFields>
+                            <FormChoiceFields 
+                                :choice='form.subject' 
+                                @visitor-message="updateMessage"
+                            ></FormChoiceFields>
 
                             <div v-if="form.subject !== ''">
                                 <div class="col-md-12">
@@ -275,7 +287,7 @@
                         </form>
                 </div>
         </div>	
-            </div>
+        </div>
         </section>
         <!-- /Section: contact -->
     
@@ -290,10 +302,27 @@
                             </a>
                         </div>
                         </div>
-                        <p>&copy;Copyright 2014 - Squad. All rights reserved.</p>
+                        <p>&copy;Copyright 2020 - Louise Fresquet</p>
+                        <p>CSS Theme based on <a style="text-color=#333" href="https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/">Squadfree</a></p>
                     </div>
                 </div>	
             </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Merci de votre intérêt !</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nous vous avons envoyé un email de confirmation à l'adresse email indiquée (veuillez vérifier vos spam si jamais il n'apparaît pas dans votre boîte de réception).</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" @click="refresh">OK</button>
+                    </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
         </footer>
       </div>
 </template>
@@ -303,6 +332,28 @@
 import FormChoice from '@/components/FormChoice.vue';
 import FormChoiceFields from '@/components/FormChoiceFields.vue';
 
+const API_URL = "http://localhost:4000/send-email";
+
+var myStartDate = '';
+var myEndDate = '';
+
+$(document).ready(function(){
+    $("#datepicker1").on("change", function(){
+        myStartDate = $('#datepicker1').datepicker({ dateFormat: 'dd,MM,yyyy' }).val();;
+        myEndDate = $('#datepicker2').datepicker({ dateFormat: 'dd,MM,yyyy' }).val();;
+        console.log("Start Date of datepicker: ", myStartDate)
+        console.log("End Date of datepicker: ", myEndDate)
+    });
+    $("#datepicker2").on("change", function(){
+        myStartDate = $('#datepicker1').datepicker({ dateFormat: 'dd,MM,yyyy' }).val();;
+        myEndDate = $('#datepicker2').datepicker({ dateFormat: 'dd,MM,yyyy' }).val();;
+        console.log("Start Date of datepicker: ", myStartDate)
+        console.log("End Date of datepicker: ", myEndDate)
+    });
+});
+
+
+
 export default {
   name: 'Home',
   components: {
@@ -310,41 +361,92 @@ export default {
     FormChoiceFields
   },
   data(){
-      //penser à échapper les infos
       return {
+        errors: [],
         form: {
             visitor_name: '',
             visitor_email: '',
             subject: '',
             message: '',
-            start_date: Date,
-            end_date: Date,
         }
       }
   },
   methods:{
     checkForm: function (e) {
-      if (this.visitor_name != '' && this.visitor_email != '') {
-          console.log('ok')
-          return true;
-      }
+        this.errors = [];
+        if (this.form.visitor_name == '') {
+            this.errors.push('Name required.');
+        }
+        if (this.form.visitor_email == '') {
+            this.errors.push('Email required.');
+        }
+        if (this.form.subject=='dates' && (myStartDate == '' || myEndDate == '')) {
+            this.errors.push('Dates required.');
+        }
+        if (this.form.message == '') {
+            this.errors.push('Message required.');
+        }
+        
+        var data = {
+            to : this.form.visitor_email,
+            message : this.form.message, 
+            dates : ((this.form.subject =='dates')? "du :"+myStartDate+" au "+myEndDate : 'none'), 
+            title : "Madame/Monsieur", 
+            name : this.form.visitor_name,
+        }
 
-      this.errors = [];
 
-      if (this.visitor_name == '') {
-        this.errors.push('Name required.');
-      }
-      if (!this.visitor_email == '') {
-        this.errors.push('Email required.');
-      }
+        //console.log(data);
+        fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+            "content-type": "application/json"
+            }
+        })
+        .then(response => response.json())
 
-      e.preventDefault();
+        $('#myModal').modal('toggle')
+        
+        // console.log("fetch api");
+        // fetch(API_URL_Test, {
+        //     method: "GET",
+        // })
+        // .then(response => response.json())
+
+        // try{
+        //     axios.post(
+        //         "http://localhost:4000/send-email", 
+        //         data
+        //     ) 
+        //     .then(function (response) {
+        //         console.log(response);
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
+        // }
+        // catch(error) {
+        //     console.log(error);
+        //     this.errors.push(error);
+        //     this.errors.push('Problem sending email');
+        // };
+
+        if (this.errors.length){
+            console.log({"error":this.errors.join(",")});
+            return;
+        }
+        e.preventDefault();
     },
-
     updateSubject($event){
         this.form.subject = $event
     },
-
+    updateMessage($event){
+        this.form.message = $event
+    },
+    refresh(){
+        location.reload();
+    }
 }};
 </script>
 

@@ -29,7 +29,7 @@ const WOW = require("wow.js");
 //calendriers Piana
 
 $(document).ready(function(){
-    $("#datepicker").datepicker({
+    $("#datepicker1").datepicker({
         language: 'fr',
         startDate: new Date()
     });
@@ -55,6 +55,7 @@ $(document).ready(function(){
 		$("#preloader").delay(100).fadeOut("slow");
 		$("#load").delay(100).fadeOut("slow");
 	});
+
 
 
 	//jQuery to collapse the navbar on scroll

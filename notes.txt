@@ -1,8 +1,21 @@
-Côté serveur :
+Vue CLI est basé sur : webpack-dev-server
+	Use webpack with a development server that provides live reloading. This should be used for development only.
+	It uses webpack-dev-middleware under the hood, which provides fast in-memory access to the webpack assets.
+
+
+Coté client :
 	-NPM : node package manager
 	dans /client : npm run serve
+
 	- browserify permet la gestion des js personalisés + css 
 	(modifier entry.js puis "browserify entry.js --debug > bundle.js")
+
+Côté serveur API :
+	Express JS pour les routes
+	Axios pour appel express
+	GAPI pour gestion des emails
+
+
 
 gestion des comptes adminbroexpressjs
 calendrier (https://www.cssscript.com/filterable-calendar-vanilla/) + refresh calendrier à l'interaction -- OK
