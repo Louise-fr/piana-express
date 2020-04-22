@@ -4,3 +4,5 @@ client/node_modules
 client/src - Copie
 server/indexTest.js
 tests/
+server/credentials/credentials.json
+server/credentials/token.json
