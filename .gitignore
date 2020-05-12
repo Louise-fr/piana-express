@@ -1,8 +1,10 @@
 node_modules
 package-lock.json
 client/node_modules
+client/dist
 client/src - Copie
 server/indexTest.js
 tests/
 server/credentials/credentials.json
 server/credentials/token.json
+server/UPpackage.json

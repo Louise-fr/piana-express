@@ -12,7 +12,6 @@ Coté client :
 
 Côté serveur API :
 	Express JS pour les routes
-	Axios pour appel express
 	GAPI pour gestion des emails
 
 
@@ -44,3 +43,43 @@ ASTUCES :
   	-git config --global user.name "Your Name"
 	to set your account's default identity.
 	Omit --global to set the identity only in this repository.
+
+
+
+
+VPS :
+	ssh louise@vps-d0523010.vps.ovh.net
+
+Déplacer / supprimer des dossiers :
+
+	sudo rm -r /var/www/piana-orsini.fr/dist
+	sudo mv /home/louise/dist /var/www/piana-orsini.fr/
+	(sudo rm -r /home/louise/dist)
+
+	sudo rm -r /var/www/piana-orsini.fr/server
+	sudo mv /home/louise/server /var/www/piana-orsini.fr/
+	(sudo rm -r /home/louise/server)
+
+	sudo rm -r /var/www/piana-orsini.fr/server/server/index.js
+	sudo mv /home/louise/index.js /var/www/piana-orsini.fr/server/server/index.js
+	(sudo rm -r /home/louise/server)
+
+
+Modifications de NGINX :
+
+	sudo nginx -t
+	sudo systemctl restart nginx 
+
+
+
+PM2 pour le serveur API : 
+
+	pm2 start -f /var/www/piana-orsini.fr/server/server/index.js
+	pm2 stop /var/www/piana-orsini.fr/server/server/index.js
+
+	--> pm2 restart 3 
+
+Certification SSL :
+	certbot  : https://certbot.eff.org/lets-encrypt/ubuntuother-nginx
+
+l.fresq.g@gmail.com

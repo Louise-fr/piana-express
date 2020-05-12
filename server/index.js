@@ -2,14 +2,24 @@
 const cors = require('cors');
 const express = require("express")
 const app = express()
-const db = require("./database.js")
+//const db = require("./database.js")
 const bodyParser = require("body-parser");
 const gapi = require("./credentials/googleAPIAuth.js")
+const helmet = require('helmet')
+var compression = require('compression');
+
+var corsOptions = {
+    origin: 'www.piana-orsini.fr',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
+app.use(helmet());
+app.use(compression());
+
 
 // Server port
 var HTTP_PORT = 4000 
@@ -18,11 +28,11 @@ app.listen(HTTP_PORT, () => {
     console.log("Server running on port %PORT%".replace("%PORT%",HTTP_PORT))
 });
 // Root endpoint
-app.get("/", (req, res, next) => {
+app.get("/", cors(corsOptions),(req, res, next) => {
     res.json({"message":"online"})
 });
 
-app.get("/send-email", (req, res, next) => {
+app.get("/send-email", cors(corsOptions),(req, res, next) => {
     res.json({"message":"use POST instead"})
 });
 
@@ -76,8 +86,8 @@ app.get("/send-email", (req, res, next) => {
 // Insert here other API endpoints
 
 
-app.post('/send-email', function (req, res) {
-    console.log("Sending emails... \n")
+app.post('/send-email', cors(corsOptions),function (req, res) {
+    console.log("Sending emails... ")
     var errors=[]
     if (!req.body.name){
         errors.push("No name specified");
@@ -99,7 +109,7 @@ app.post('/send-email', function (req, res) {
         return;
     }
 
-    console.log(req.body)
+    //console.log(req.body)
 
     try {
         gapi.gapiSendMessages(

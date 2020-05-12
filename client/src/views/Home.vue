@@ -12,7 +12,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="#intro">
-                        <h1>Coin pianais</h1>
+                        <h1>Piana Orsini</h1>
                     </a>
                 </div>
     
@@ -90,7 +90,7 @@
                         <!-- Page 1 -->
                         <div class="item active">
                             <div class="carousel-page">
-                            <img src="../assets/img/bg10-crop.jpg" class="img-responsive" style="margin:0px auto;" />
+                            <img src="../assets/img/bg10-crop-web.jpg" class="img-responsive" style="margin:0px auto;" />
                             </div>
                             <div class="carousel-caption">
                                 <h5> Oh que c'est beau </h5>
@@ -99,7 +99,7 @@
                         <!-- Page 2 -->
                         <div class="item">
                             <div class="carousel-page">
-                                <img src="../assets/img/bg7-crop.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  /></div>
+                                <img src="../assets/img/bg7-crop-web.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  /></div>
                             <div class="carousel-caption">
                                 <h5> U ghjattu ! </h5>
                                 </div>
@@ -107,7 +107,7 @@
                         <!-- Page 3 -->
                         <div class="item">
                             <div class="carousel-page">
-                            <img src="../assets/img/bg11-crop.jpg" class="img-responsive img-rounded" 
+                            <img src="../assets/img/bg11-crop-web.jpg" class="img-responsive img-rounded" 
                                 style="margin:0px auto;max-height:100%;"  />
                             </div>
                             <div class="carousel-caption">
@@ -117,7 +117,7 @@
                         <!-- Page 4 -->
                         <div class="item">
                             <div class="carousel-page">
-                            <img src="../assets/img/vue-piana.jpg" class="img-responsive img-rounded" 
+                            <img src="../assets/img/vue-piana-web.jpg" class="img-responsive img-rounded" 
                                 style="margin:0px auto;max-height:100%;"  />
                             </div>
                             <div class="carousel-caption">
@@ -303,7 +303,7 @@
                         </div>
                         </div>
                         <p>&copy;Copyright 2020 - Louise Fresquet</p>
-                        <p>CSS Theme based on <a style="text-color=#333" href="https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/">Squadfree</a></p>
+                        <p>CSS Theme based on <a href="https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/">Squadfree</a></p>
                     </div>
                 </div>	
             </div>
@@ -332,7 +332,7 @@
 import FormChoice from '@/components/FormChoice.vue';
 import FormChoiceFields from '@/components/FormChoiceFields.vue';
 
-const API_URL = "http://localhost:4000/send-email";
+const API_URL = "https://piana-orsini.fr/send-email";
 
 var myStartDate = '';
 var myEndDate = '';

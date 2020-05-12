@@ -1,11 +1,12 @@
 {
-  "name": "Piana-express",
+  "name": "Piana-orsini",
   "version": "1.0.0",
   "description": "",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +19,12 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^3.4.1",
     "bootstrap-datepicker": "^1.9.0",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
+    "helmet": "^3.22.0",
+    "image-webpack-loader": "^6.0.0",
     "jquery": "^3.4.1",
     "jquery-easing": "0.0.1",
     "jquery-scrollto": "^1.4.6",
@@ -36,5 +40,8 @@
     "rijs.npm": "^2.0.0",
     "sqlite3": "^4.1.1",
     "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^3.1.0"
   }
 }
