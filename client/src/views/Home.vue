@@ -84,46 +84,157 @@
                         <li data-target="#my_carousel" data-slide-to="1"></li>
                         <li data-target="#my_carousel" data-slide-to="2"></li>
                         <li data-target="#my_carousel" data-slide-to="3"></li>
+                         <li data-target="#my_carousel" data-slide-to="4"></li>
+                         <li data-target="#my_carousel" data-slide-to="5"></li>
+                         <li data-target="#my_carousel" data-slide-to="6"></li>
+                         <li data-target="#my_carousel" data-slide-to="7"></li>
+                         <li data-target="#my_carousel" data-slide-to="8"></li>
+                         <li data-target="#my_carousel" data-slide-to="9"></li>
+                         <li data-target="#my_carousel" data-slide-to="10"></li>
+                         <li data-target="#my_carousel" data-slide-to="11"></li>
+                         <li data-target="#my_carousel" data-slide-to="12"></li>
+                         <li data-target="#my_carousel" data-slide-to="13"></li>
+                         <li data-target="#my_carousel" data-slide-to="14"></li>
                     </ol>
                     <!-- Slides -->
                     <div class="carousel-inner">
                         <!-- Page 1 -->
                         <div class="item active">
                             <div class="carousel-page">
-                            <img src="../assets/img/bg10-crop-web.jpg" class="img-responsive" style="margin:0px auto;" />
+                            <img src="../assets/img/14.jpg" class="img-responsive" style="margin:0px auto;" />
                             </div>
                             <div class="carousel-caption">
-                                <h5> Oh que c'est beau </h5>
+                                <h5> Montée d'escaliers </h5>
                                 </div>
                         </div>
                         <!-- Page 2 -->
                         <div class="item">
                             <div class="carousel-page">
-                                <img src="../assets/img/bg7-crop-web.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  /></div>
+                                <img src="../assets/img/0.jpg" class="img-responsive img-rounded" style="margin:0px auto;"  /></div>
                             <div class="carousel-caption">
-                                <h5> U ghjattu ! </h5>
+                                <h5> Terrasse </h5>
                                 </div>
                         </div>
                         <!-- Page 3 -->
                         <div class="item">
                             <div class="carousel-page">
-                            <img src="../assets/img/bg11-crop-web.jpg" class="img-responsive img-rounded" 
+                            <img src="../assets/img/1.jpg" class="img-responsive img-rounded" 
                                 style="margin:0px auto;max-height:100%;"  />
                             </div>
                             <div class="carousel-caption">
-                                <h5> La belle plante ! </h5>
+                                <h5> Terrasse </h5>
                                 </div>
                         </div>
                         <!-- Page 4 -->
                         <div class="item">
                             <div class="carousel-page">
-                            <img src="../assets/img/vue-piana-web.jpg" class="img-responsive img-rounded" 
+                            <img src="../assets/img/2.jpg" class="img-responsive img-rounded" 
                                 style="margin:0px auto;max-height:100%;"  />
                             </div>
                             <div class="carousel-caption">
-                                <h5>Vue du village </h5>
+                                <h5>Vue de ta terrasse </h5>
                                 </div>
                         </div>
+                        <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/11.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Vue de ta terrasse </h5>
+                                </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/13.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Cuisine </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/9.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Salon </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/10.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Cuisine </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/7.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Salon</h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/8.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Salon </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/3.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Chambre 1 </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/15.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Vue Chambre 1 </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/16.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Vue Chambre 1 </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/17.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Chambre 2 </h5>
+                                </div>
+                        </div>
+                         <div class="item">
+                            <div class="carousel-page">
+                            <img src="../assets/img/4.jpg" class="img-responsive img-rounded" 
+                                style="margin:0px auto;max-height:100%;"  />
+                            </div>
+                            <div class="carousel-caption">
+                                <h5>Chambre 2 </h5>
+                                </div>
+                        </div>
+                         
                     </div>
                     <!-- Contrôles -->
                     <a class="left carousel-control" href="#my_carousel" data-slide="prev">
@@ -148,7 +259,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="wow bounceInDown" data-wow-delay="0.4s">
                         <div class="section-heading">
-                        <h2>Les petits +</h2>
+                        <h2>Les plus...</h2>
                         <i class="fa fa-2x fa-angle-down"></i>
     
                         </div>
@@ -380,8 +491,8 @@ export default {
         if (this.form.visitor_email == '') {
             this.errors.push('Email required.');
         }
-        if (this.form.subject=='dates' && (myStartDate == '' || myEndDate == '')) {
-            this.errors.push('Dates required.');
+        if (this.form.subject=='') {
+            this.errors.push('Subject required.');
         }
         if (this.form.message == '') {
             this.errors.push('Message required.');
@@ -390,8 +501,7 @@ export default {
         var data = {
             to : this.form.visitor_email,
             message : this.form.message, 
-            dates : ((this.form.subject =='dates')? "du :"+myStartDate+" au "+myEndDate : 'none'), 
-            title : "Madame/Monsieur", 
+            subject : this.form.subject, 
             name : this.form.visitor_name,
         }
 

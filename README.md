@@ -1,6 +1,8 @@
-# client
+# Piana Express
 
-## Project setup
+Using Vue and Express to create a showcase site
+
+## Client setup
 ```
 npm install
 ```

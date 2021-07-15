@@ -7,4 +7,11 @@ server/indexTest.js
 tests/
 server/credentials/credentials.json
 server/credentials/token.json
+server/node_modules
+server/db.sqlite
 server/UPpackage.json
+server/db.sqlite
+tree.txt
+db.sqlite
+server/UPpackage.json
+tree-pe.ps1
